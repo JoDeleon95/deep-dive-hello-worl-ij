@@ -1,0 +1,223 @@
+!SESSION 2019-01-09 14:33:14.694 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_191
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/joshdeleon/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/joshdeleon/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2019-01-09 14:33:37.681
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-01-09 14:52:33.919
+!MESSAGE git@github.com:JoDeleon95/deep-dive-hello-world.git: Auth cancel
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: git@github.com:JoDeleon95/deep-dive-hello-world.git: Auth cancel
+	at org.eclipse.jgit.api.LsRemoteCommand.execute(LsRemoteCommand.java:222)
+	at org.eclipse.jgit.api.LsRemoteCommand.call(LsRemoteCommand.java:161)
+	at org.eclipse.egit.core.op.ListRemoteOperation.run(ListRemoteOperation.java:116)
+	at org.eclipse.egit.ui.internal.clone.SourceBranchPage$8.run(SourceBranchPage.java:340)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.eclipse.jgit.errors.TransportException: git@github.com:JoDeleon95/deep-dive-hello-world.git: Auth cancel
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:191)
+	at org.eclipse.jgit.transport.SshTransport.getSession(SshTransport.java:140)
+	at org.eclipse.jgit.transport.TransportGitSsh$SshFetchConnection.<init>(TransportGitSsh.java:280)
+	at org.eclipse.jgit.transport.TransportGitSsh.openFetch(TransportGitSsh.java:170)
+	at org.eclipse.jgit.api.LsRemoteCommand.execute(LsRemoteCommand.java:200)
+	... 4 more
+Caused by: com.jcraft.jsch.JSchException: Auth cancel
+	at com.jcraft.jsch.Session.connect(Session.java:518)
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:145)
+	... 8 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-01-09 14:58:02.371
+!MESSAGE git@github.com:JoDeleon95/deep-dive-hello-world.git: Auth fail
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: git@github.com:JoDeleon95/deep-dive-hello-world.git: Auth fail
+	at org.eclipse.jgit.api.LsRemoteCommand.execute(LsRemoteCommand.java:222)
+	at org.eclipse.jgit.api.LsRemoteCommand.call(LsRemoteCommand.java:161)
+	at org.eclipse.egit.core.op.ListRemoteOperation.run(ListRemoteOperation.java:116)
+	at org.eclipse.egit.ui.internal.clone.SourceBranchPage$8.run(SourceBranchPage.java:340)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.eclipse.jgit.errors.TransportException: git@github.com:JoDeleon95/deep-dive-hello-world.git: Auth fail
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:191)
+	at org.eclipse.jgit.transport.SshTransport.getSession(SshTransport.java:140)
+	at org.eclipse.jgit.transport.TransportGitSsh$SshFetchConnection.<init>(TransportGitSsh.java:280)
+	at org.eclipse.jgit.transport.TransportGitSsh.openFetch(TransportGitSsh.java:170)
+	at org.eclipse.jgit.api.LsRemoteCommand.execute(LsRemoteCommand.java:200)
+	... 4 more
+Caused by: com.jcraft.jsch.JSchException: Auth fail
+	at com.jcraft.jsch.Session.connect(Session.java:519)
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:145)
+	... 8 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-01-09 14:59:11.480
+!MESSAGE ssh://jodeleon95@github.com/JoDeleon95/deep-dive-hello-world.git: Auth fail
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: ssh://jodeleon95@github.com/JoDeleon95/deep-dive-hello-world.git: Auth fail
+	at org.eclipse.jgit.api.LsRemoteCommand.execute(LsRemoteCommand.java:222)
+	at org.eclipse.jgit.api.LsRemoteCommand.call(LsRemoteCommand.java:161)
+	at org.eclipse.egit.core.op.ListRemoteOperation.run(ListRemoteOperation.java:116)
+	at org.eclipse.egit.ui.internal.clone.SourceBranchPage$8.run(SourceBranchPage.java:340)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.eclipse.jgit.errors.TransportException: ssh://jodeleon95@github.com/JoDeleon95/deep-dive-hello-world.git: Auth fail
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:191)
+	at org.eclipse.jgit.transport.SshTransport.getSession(SshTransport.java:140)
+	at org.eclipse.jgit.transport.TransportGitSsh$SshFetchConnection.<init>(TransportGitSsh.java:280)
+	at org.eclipse.jgit.transport.TransportGitSsh.openFetch(TransportGitSsh.java:170)
+	at org.eclipse.jgit.api.LsRemoteCommand.execute(LsRemoteCommand.java:200)
+	... 4 more
+Caused by: com.jcraft.jsch.JSchException: Auth fail
+	at com.jcraft.jsch.Session.connect(Session.java:519)
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:145)
+	... 8 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-01-09 15:07:54.997
+!MESSAGE git@github.com:JoDeleon95/deep-dive-hello-world.git: Auth cancel
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: git@github.com:JoDeleon95/deep-dive-hello-world.git: Auth cancel
+	at org.eclipse.jgit.api.LsRemoteCommand.execute(LsRemoteCommand.java:222)
+	at org.eclipse.jgit.api.LsRemoteCommand.call(LsRemoteCommand.java:161)
+	at org.eclipse.egit.core.op.ListRemoteOperation.run(ListRemoteOperation.java:116)
+	at org.eclipse.egit.ui.internal.clone.SourceBranchPage$8.run(SourceBranchPage.java:340)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.eclipse.jgit.errors.TransportException: git@github.com:JoDeleon95/deep-dive-hello-world.git: Auth cancel
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:191)
+	at org.eclipse.jgit.transport.SshTransport.getSession(SshTransport.java:140)
+	at org.eclipse.jgit.transport.TransportGitSsh$SshFetchConnection.<init>(TransportGitSsh.java:280)
+	at org.eclipse.jgit.transport.TransportGitSsh.openFetch(TransportGitSsh.java:170)
+	at org.eclipse.jgit.api.LsRemoteCommand.execute(LsRemoteCommand.java:200)
+	... 4 more
+Caused by: com.jcraft.jsch.JSchException: Auth cancel
+	at com.jcraft.jsch.Session.connect(Session.java:518)
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:145)
+	... 8 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-01-09 15:31:57.070
+!MESSAGE git@github.com:JoDeleon95/deep-dive-hello-world.git: Auth fail
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: git@github.com:JoDeleon95/deep-dive-hello-world.git: Auth fail
+	at org.eclipse.jgit.api.LsRemoteCommand.execute(LsRemoteCommand.java:222)
+	at org.eclipse.jgit.api.LsRemoteCommand.call(LsRemoteCommand.java:161)
+	at org.eclipse.egit.core.op.ListRemoteOperation.run(ListRemoteOperation.java:116)
+	at org.eclipse.egit.ui.internal.clone.SourceBranchPage$8.run(SourceBranchPage.java:340)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.eclipse.jgit.errors.TransportException: git@github.com:JoDeleon95/deep-dive-hello-world.git: Auth fail
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:191)
+	at org.eclipse.jgit.transport.SshTransport.getSession(SshTransport.java:140)
+	at org.eclipse.jgit.transport.TransportGitSsh$SshFetchConnection.<init>(TransportGitSsh.java:280)
+	at org.eclipse.jgit.transport.TransportGitSsh.openFetch(TransportGitSsh.java:170)
+	at org.eclipse.jgit.api.LsRemoteCommand.execute(LsRemoteCommand.java:200)
+	... 4 more
+Caused by: com.jcraft.jsch.JSchException: Auth fail
+	at com.jcraft.jsch.Session.connect(Session.java:519)
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:145)
+	... 8 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-01-09 15:43:21.353
+!MESSAGE git@github.com:JoDeleon95/deep-dive-hello-world.git: Auth fail
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: git@github.com:JoDeleon95/deep-dive-hello-world.git: Auth fail
+	at org.eclipse.jgit.api.LsRemoteCommand.execute(LsRemoteCommand.java:222)
+	at org.eclipse.jgit.api.LsRemoteCommand.call(LsRemoteCommand.java:161)
+	at org.eclipse.egit.core.op.ListRemoteOperation.run(ListRemoteOperation.java:116)
+	at org.eclipse.egit.ui.internal.clone.SourceBranchPage$8.run(SourceBranchPage.java:340)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.eclipse.jgit.errors.TransportException: git@github.com:JoDeleon95/deep-dive-hello-world.git: Auth fail
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:191)
+	at org.eclipse.jgit.transport.SshTransport.getSession(SshTransport.java:140)
+	at org.eclipse.jgit.transport.TransportGitSsh$SshFetchConnection.<init>(TransportGitSsh.java:280)
+	at org.eclipse.jgit.transport.TransportGitSsh.openFetch(TransportGitSsh.java:170)
+	at org.eclipse.jgit.api.LsRemoteCommand.execute(LsRemoteCommand.java:200)
+	... 4 more
+Caused by: com.jcraft.jsch.JSchException: Auth fail
+	at com.jcraft.jsch.Session.connect(Session.java:519)
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:145)
+	... 8 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-01-09 20:43:06.295
+!MESSAGE git@github.com:JoDeleon95/deep-dive-hello-world.git: Auth cancel
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: git@github.com:JoDeleon95/deep-dive-hello-world.git: Auth cancel
+	at org.eclipse.jgit.api.LsRemoteCommand.execute(LsRemoteCommand.java:222)
+	at org.eclipse.jgit.api.LsRemoteCommand.call(LsRemoteCommand.java:161)
+	at org.eclipse.egit.core.op.ListRemoteOperation.run(ListRemoteOperation.java:116)
+	at org.eclipse.egit.ui.internal.clone.SourceBranchPage$8.run(SourceBranchPage.java:340)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.eclipse.jgit.errors.TransportException: git@github.com:JoDeleon95/deep-dive-hello-world.git: Auth cancel
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:191)
+	at org.eclipse.jgit.transport.SshTransport.getSession(SshTransport.java:140)
+	at org.eclipse.jgit.transport.TransportGitSsh$SshFetchConnection.<init>(TransportGitSsh.java:280)
+	at org.eclipse.jgit.transport.TransportGitSsh.openFetch(TransportGitSsh.java:170)
+	at org.eclipse.jgit.api.LsRemoteCommand.execute(LsRemoteCommand.java:200)
+	... 4 more
+Caused by: com.jcraft.jsch.JSchException: Auth cancel
+	at com.jcraft.jsch.Session.connect(Session.java:518)
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:145)
+	... 8 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-01-11 13:44:06.996
+!MESSAGE git@github.com:JoDeleon95/deep-dive-hello-world.git: Auth cancel
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: git@github.com:JoDeleon95/deep-dive-hello-world.git: Auth cancel
+	at org.eclipse.jgit.api.LsRemoteCommand.execute(LsRemoteCommand.java:222)
+	at org.eclipse.jgit.api.LsRemoteCommand.call(LsRemoteCommand.java:161)
+	at org.eclipse.egit.core.op.ListRemoteOperation.run(ListRemoteOperation.java:116)
+	at org.eclipse.egit.ui.internal.clone.SourceBranchPage$8.run(SourceBranchPage.java:340)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.eclipse.jgit.errors.TransportException: git@github.com:JoDeleon95/deep-dive-hello-world.git: Auth cancel
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:191)
+	at org.eclipse.jgit.transport.SshTransport.getSession(SshTransport.java:140)
+	at org.eclipse.jgit.transport.TransportGitSsh$SshFetchConnection.<init>(TransportGitSsh.java:280)
+	at org.eclipse.jgit.transport.TransportGitSsh.openFetch(TransportGitSsh.java:170)
+	at org.eclipse.jgit.api.LsRemoteCommand.execute(LsRemoteCommand.java:200)
+	... 4 more
+Caused by: com.jcraft.jsch.JSchException: Auth cancel
+	at com.jcraft.jsch.Session.connect(Session.java:518)
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:145)
+	... 8 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-01-11 13:50:22.365
+!MESSAGE git@github.com:JoDeleon95/deep-dive-hello-world.git: Auth cancel
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: git@github.com:JoDeleon95/deep-dive-hello-world.git: Auth cancel
+	at org.eclipse.jgit.api.LsRemoteCommand.execute(LsRemoteCommand.java:222)
+	at org.eclipse.jgit.api.LsRemoteCommand.call(LsRemoteCommand.java:161)
+	at org.eclipse.egit.core.op.ListRemoteOperation.run(ListRemoteOperation.java:116)
+	at org.eclipse.egit.ui.internal.clone.SourceBranchPage$8.run(SourceBranchPage.java:340)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.eclipse.jgit.errors.TransportException: git@github.com:JoDeleon95/deep-dive-hello-world.git: Auth cancel
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:191)
+	at org.eclipse.jgit.transport.SshTransport.getSession(SshTransport.java:140)
+	at org.eclipse.jgit.transport.TransportGitSsh$SshFetchConnection.<init>(TransportGitSsh.java:280)
+	at org.eclipse.jgit.transport.TransportGitSsh.openFetch(TransportGitSsh.java:170)
+	at org.eclipse.jgit.api.LsRemoteCommand.execute(LsRemoteCommand.java:200)
+	... 4 more
+Caused by: com.jcraft.jsch.JSchException: Auth cancel
+	at com.jcraft.jsch.Session.connect(Session.java:518)
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:145)
+	... 8 more
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-01-11 13:50:39.005
+!MESSAGE Exception caught during execution of command '[git, --version]' in '/usr/bin', return code '1', error message 'xcode-select: note: no developer tools were found at '/Applications/Xcode.app', requesting install. Choose an option in the dialog to download the command line developer tools.
+'
+!SESSION 2019-01-11 13:53:28.147 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_191
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/joshdeleon/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/joshdeleon/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2019-01-11 13:53:38.305
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2019-01-11 14:14:28.404 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_191
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/joshdeleon/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/joshdeleon/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2019-01-11 14:14:39.720
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
